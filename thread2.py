@@ -6,7 +6,7 @@ def suplayer(file,time,loop):
     sleep(time)
     print("%s end at %s"%(file,ctime()))
 
-file_dict = {"love.mp3":3,"iron man.rmvb":6}
+file_dict = {"love.mp3":6,"iron man.rmvb":3}
 threadl = []
 print(file_dict.items())
 
@@ -18,7 +18,7 @@ if __name__ == "__main__":
     threadl[1].setDaemon(True)
     for t in threadl:
         t.start()
-        # t.join()
+        t.join()
     # for t in threadl:
     #     t.join()
     print("all is end at %s"%ctime())
