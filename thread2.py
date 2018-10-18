@@ -15,10 +15,12 @@ for file,time in file_dict.items():
     threadl.append(t)
 
 if __name__ == "__main__":
-    threadl[1].setDaemon(True)
+    threadl[0].setDaemon(True)
     for t in threadl:
         t.start()
-        t.join()
+        print(t.getName())
+        # t.join()
     # for t in threadl:
     #     t.join()
+
     print("all is end at %s"%ctime())
